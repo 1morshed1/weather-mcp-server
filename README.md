@@ -34,7 +34,7 @@ A two-part Python application for weather data and AI-powered assistance, featur
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/1morshed1/weather-mcp-server.git
    cd mcp-project
    ```
 
