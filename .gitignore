@@ -26,12 +26,6 @@ docker-compose.override.yml
 .DS_Store
 Thumbs.db
 
-# Images and outputs
-*.png
-*.jpg
-*.jpeg
-*.gif
-
 # Build
 build/
 dist/
