@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Images and outputs
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Misc
+*.sqlite3
+*.db
+
+# Ignore img only if not needed in repo
+# /img/

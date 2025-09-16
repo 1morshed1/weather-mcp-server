@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: mcp/Dockerfile
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - .env:/app/.env
+
+  streamlit-client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    ports:
+      - "8501:8501"
+    depends_on:
+      mcp-server:
+        condition: service_healthy
+    volumes:
+      - .env:/app/.env
